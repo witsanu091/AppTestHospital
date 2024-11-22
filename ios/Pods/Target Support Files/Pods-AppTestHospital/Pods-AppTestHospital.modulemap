@@ -1,0 +1,6 @@
+module Pods_AppTestHospital {
+  umbrella header "Pods-AppTestHospital-umbrella.h"
+
+  export *
+  module * { export * }
+}

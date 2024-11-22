@@ -1,0 +1,16 @@
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+/Users/wisanu.p/.rbenv/versions/3.1.4/bin/ruby -I /Users/wisanu.p/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241122-69078-ah77qe sitelibdir\=./.gem.20241122-69078-ah77qe clean
+
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241122-69078-ah77qe sitelibdir\=./.gem.20241122-69078-ah77qe
+compiling nkf.c
+linking shared-object nkf.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20241122-69078-ah77qe sitelibdir\=./.gem.20241122-69078-ah77qe install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20241122-69078-ah77qe

@@ -1,0 +1,7 @@
+{
+  "name": "AppTestHospital",
+  "displayName": "AppTestHospital",
+  "ios": {
+    "supportsTablet": true
+  }
+}

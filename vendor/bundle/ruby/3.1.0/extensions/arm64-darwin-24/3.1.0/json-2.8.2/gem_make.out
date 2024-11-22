@@ -1,0 +1,22 @@
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/json-2.8.2/ext/json/ext/parser
+/Users/wisanu.p/.rbenv/versions/3.1.4/bin/ruby -I /Users/wisanu.p/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... no
+checking for rb_gc_mark_locations() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/json-2.8.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20241122-69387-6ct8j9 sitelibdir\=./.gem.20241122-69387-6ct8j9 clean
+
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/json-2.8.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20241122-69387-6ct8j9 sitelibdir\=./.gem.20241122-69387-6ct8j9
+compiling parser.c
+linking shared-object json/ext/parser.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/wisanu.p/Documents/GitHub/freelanch/AppTestHospital/vendor/bundle/ruby/3.1.0/gems/json-2.8.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20241122-69387-6ct8j9 sitelibdir\=./.gem.20241122-69387-6ct8j9 install
+/usr/bin/install -c -m 0755 parser.bundle ./.gem.20241122-69387-6ct8j9/json/ext
