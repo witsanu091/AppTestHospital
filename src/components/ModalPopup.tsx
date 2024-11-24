@@ -33,8 +33,7 @@ const ModalPopup = ({ visible, data, onClose }: any) => {
                         <View style={{ marginTop: 10 }}>
                             {data && data.detail.map((value: any, index: any) => (
                                 <View>
-                                    <Text key={index}>{value.sequence}. {value.content} จำนวนเงิน {value.price}</Text>
-                                    <Text style={{ color: value.success ? "green" : "red" }}>วันที่จ่าย {value.date} </Text>
+
                                 </View>
                             ))}
 

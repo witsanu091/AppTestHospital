@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, Button, ScrollView, View, TouchableOpacity } from 'react-native';
-import { themeColor } from '../styles/global';
+import { fontFamily, themeColor } from '../styles/global';
 import Modal from 'react-native-modal';
 import { MMKV } from 'react-native-mmkv';
 import i18n from '../stores/i18n';
@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     },
     languageText: {
         fontSize: 16,
+        fontFamily: fontFamily.regular
     },
 });
 

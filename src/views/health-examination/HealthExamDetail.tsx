@@ -1,16 +1,10 @@
-import React from 'react';
-import {
-    View,
-    Text,
-    Image,
-    TouchableOpacity,
-    ScrollView,
-} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, TouchableOpacity, ScrollView, RefreshControl } from 'react-native';
 import { useTLHStore } from '../../view-models/useTLHStore';
 import HeaderApp from '../../components/HeaderApp';
 import MedicationCardDetail from '../../components/MedicationCardDetail';
 import { imageInApp } from '../../../assets/constants/imageList';
-import { styles } from './Style';
+import { styles } from './HealthStyle';
 import { useTranslation } from 'react-i18next';
 
 interface Props {
@@ -20,22 +14,44 @@ interface Props {
 const HealthExamDetailsScreen: React.FC<Props> = ({ navigation }) => {
     const { t } = useTranslation();
     const { selectedMedication } = useTLHStore();
+    const [refreshing, setRefreshing] = useState(false);
+
 
     if (!selectedMedication) return null;
+
+    const onRefresh = async () => {
+        setRefreshing(true);
+
+
+        setTimeout(() => {
+            setRefreshing(false);
+        }, 1500);
+    };
 
     return (
         <View style={styles.container}>
             <HeaderApp navigation={navigation} screenName="เภสัชพันธุศาสตร์" />
-            <ScrollView>
 
+            <ScrollView
+                refreshControl={
+                    <RefreshControl
+                        refreshing={refreshing}
+                        onRefresh={onRefresh}
+                        colors={['#007bff']}
+                        tintColor="#007bff"
+                        progressBackgroundColor="#ffffff"
+                    />
+                }
+                keyboardShouldPersistTaps="handled"
+                nestedScrollEnabled
+                contentContainerStyle={{ flexGrow: 1 }}
+
+            >
                 <View style={{ padding: 10 }}>
                     <MedicationCardDetail data={selectedMedication} />
-
                     <TouchableOpacity style={styles.emergencyButton}>
-                        <Text style={styles.emergencyButtonText}>{t("consultation")}</Text>
-                        <Text style={styles.emergencySubtitle}>
-                            {t("consultDirectly")}
-                        </Text>
+                        <Text style={styles.emergencyButtonText}>{t('consultation')}</Text>
+                        <Text style={styles.emergencySubtitle}>{t('consultDirectly')}</Text>
                     </TouchableOpacity>
 
                     <View style={styles.infoContainer}>
@@ -51,10 +67,8 @@ const HealthExamDetailsScreen: React.FC<Props> = ({ navigation }) => {
                     </View>
                 </View>
             </ScrollView>
-
         </View>
     );
 };
-
 
 export default HealthExamDetailsScreen;

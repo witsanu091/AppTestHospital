@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import { fontFamily } from '../styles/global';
 
 interface MedicationCardProps {
     data: any;
@@ -94,12 +95,13 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: '#0044CC',
-        fontFamily: "Kanit-Regular"
+        fontFamily: fontFamily.regular
     },
     date: {
         fontSize: 12,
         color: '#555',
         marginVertical: 5,
+        fontFamily: fontFamily.regular
     },
     statusButton: {
         alignSelf: 'flex-start',
@@ -112,6 +114,7 @@ const styles = StyleSheet.create({
     statusText: {
         fontSize: 12,
         color: '#FFF',
+        fontFamily: fontFamily.regular
     },
 
 });

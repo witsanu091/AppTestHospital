@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { fontFamily } from '../styles/global';
 
 interface MedicationCardDetailProps {
     data: any;
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: '#0044CC',
-        fontFamily: "Kanit-Regular"
+        fontFamily: fontFamily.regular
     },
     date: {
         fontSize: 12,
@@ -157,7 +158,8 @@ const styles = StyleSheet.create({
     detailText: {
         fontSize: 14,
         color: '#555',
-        flex: 1
+        flex: 1,
+        fontFamily: fontFamily.regular
     },
     statusNormal: {
         backgroundColor: '#17B26A',
@@ -175,7 +177,7 @@ const styles = StyleSheet.create({
     statusText: {
         fontSize: 12,
         color: '#FFF',
-
+        fontFamily: fontFamily.regular
     },
 });
 
