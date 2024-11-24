@@ -2,14 +2,14 @@ import { create } from 'zustand';
 import { medicationData } from '../../assets/data/medicateData';
 import { Medication } from '../models/medicateModels';
 
-interface TLHState {
+interface HealthState {
     medications: Medication[];
     selectedMedication: Medication | null;
     setMedications: (medications: Medication[]) => void;
     setSelectedMedication: (medication: Medication) => void;
 }
 
-export const useTLHStore = create<TLHState>((set) => ({
+export const useHealthStore = create<HealthState>((set) => ({
     medications: medicationData,
     selectedMedication: null,
     setMedications: (medications) => set({ medications }),

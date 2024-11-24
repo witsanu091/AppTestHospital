@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { fontFamily } from '../styles/global';
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 interface MedicationCardDetailProps {
     data: any;
@@ -35,12 +36,9 @@ const MedicationCardDetail: React.FC<MedicationCardDetailProps> = ({ data }) => 
                         </Text>
                     </View>
                 </View>
-                <View style={{ flex: 0.2, alignItems: "flex-end" }}>
-                    <TouchableOpacity>
-                        <Image
-                            source={data.image}
-                            style={styles.icon}
-                        />
+                <View style={styles.iconChart} >
+                    <TouchableOpacity style={styles.iconChartPosition}>
+                        <FontAwesome name={"bar-chart-o"} size={18} color={"#175CD3"} />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -179,6 +177,19 @@ const styles = StyleSheet.create({
         color: '#FFF',
         fontFamily: fontFamily.regular
     },
+    iconChart: {
+        alignItems: "flex-end", borderRadius: 25,
+        marginRight: 16,
+        backgroundColor: '#FFF',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
+        width: 35,
+        height: 35,
+    },
+    iconChartPosition: { alignItems: "center", justifyContent: "center", marginTop: 8, marginRight: 5 }
 });
 
 export default MedicationCardDetail;

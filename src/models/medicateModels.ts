@@ -3,5 +3,5 @@ export interface Medication {
     name: string;
     date: string;
     status: 'ปกติ' | 'ผิดปกติ';
-    image: string
+    image: string,
 }

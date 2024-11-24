@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, RefreshControl } from 'react-native';
-import { useTLHStore } from '../../view-models/useTLHStore';
 import HeaderApp from '../../components/HeaderApp';
 import MedicationCardDetail from '../../components/MedicationCardDetail';
 import { imageInApp } from '../../../assets/constants/imageList';
 import { styles } from './HealthStyle';
 import { useTranslation } from 'react-i18next';
+import { useHealthStore } from '../../stores/healthStorage';
 
 interface Props {
     navigation: any;
@@ -13,7 +13,7 @@ interface Props {
 
 const HealthExamDetailsScreen: React.FC<Props> = ({ navigation }) => {
     const { t } = useTranslation();
-    const { selectedMedication } = useTLHStore();
+    const { selectedMedication } = useHealthStore();
     const [refreshing, setRefreshing] = useState(false);
 
 
