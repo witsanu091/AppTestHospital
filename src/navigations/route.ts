@@ -2,6 +2,7 @@
 // import HeaderApp from "../components/HeaderApp";
 import HealthExamScreen from "../views/health-examination/HealthExam";
 import HealthExamDetailsScreen from "../views/health-examination/HealthExamDetail";
+import HomeScreen from "../views/home/HomeScreen";
 // import HomeScreen from "../views/home/HomeScreen";
 // import HealthExam from "../views/health-examination/HealthExam";
 // import ProfileScreen from "../views/profile/ProfileScreen";

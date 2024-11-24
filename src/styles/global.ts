@@ -79,7 +79,6 @@ export const stylesHeaderPosition = StyleSheet.create({
         justifyContent: "flex-end",
         alignItems: "center",
         paddingTop: 20,
-
     },
     sizeLogoHeader: { width: "70%", height: 30 },
     positionIconHeader: {
@@ -90,6 +89,7 @@ export const stylesHeaderPosition = StyleSheet.create({
         paddingRight: 15,
         flexDirection: "row",
     },
+    textHeaderCenter: { fontSize: 18, fontFamily: 'Kanit-Regular' }
 });
 
 export const styleHomePage = StyleSheet.create({

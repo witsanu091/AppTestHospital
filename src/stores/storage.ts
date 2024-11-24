@@ -48,3 +48,15 @@ export const getToken = (): Promise<string> => {
         }
     });
 };
+
+export const getLanguage = (): Promise<string> => {
+    return new Promise((resolve) => {
+        try {
+            const language = storage.getString('language');
+            resolve(language ?? '');
+        } catch (error) {
+            console.log(error);
+            resolve('');
+        }
+    });
+};

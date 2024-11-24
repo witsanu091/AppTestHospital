@@ -2,163 +2,163 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/fonts/Kanit-Black.ttf",
+      "path": "assets/fonts/Kanit-Black.ttf",
       "sha1": "7d7c545de2f02989d1f2a76849291b75f6e6b7e6"
     },
     {
-      "path": "src/assets/fonts/Kanit-BlackItalic.ttf",
+      "path": "assets/fonts/Kanit-BlackItalic.ttf",
       "sha1": "57556af8831c92f61f91098bcce27f60002c6192"
     },
     {
-      "path": "src/assets/fonts/Kanit-Bold.ttf",
+      "path": "assets/fonts/Kanit-Bold.ttf",
       "sha1": "4d376a5447efe2ece1e3e39ff0fc2bbf3af0e5f8"
     },
     {
-      "path": "src/assets/fonts/Kanit-BoldItalic.ttf",
+      "path": "assets/fonts/Kanit-BoldItalic.ttf",
       "sha1": "a515d96e8b0ae666c180ff853f07282647cce78b"
     },
     {
-      "path": "src/assets/fonts/Kanit-ExtraBold.ttf",
+      "path": "assets/fonts/Kanit-ExtraBold.ttf",
       "sha1": "e880d5f10a706034ca71f17c6534a3e76e1319ad"
     },
     {
-      "path": "src/assets/fonts/Kanit-ExtraBoldItalic.ttf",
+      "path": "assets/fonts/Kanit-ExtraBoldItalic.ttf",
       "sha1": "1505f04535bfb9ecbab2452a192d32f431a057fd"
     },
     {
-      "path": "src/assets/fonts/Kanit-ExtraLight.ttf",
+      "path": "assets/fonts/Kanit-ExtraLight.ttf",
       "sha1": "c948dac66c673a313a9b43294e35b73a14a0cf69"
     },
     {
-      "path": "src/assets/fonts/Kanit-ExtraLightItalic.ttf",
+      "path": "assets/fonts/Kanit-ExtraLightItalic.ttf",
       "sha1": "81e72743d10d5bfbb8e6c10df63473c59f461851"
     },
     {
-      "path": "src/assets/fonts/Kanit-Italic.ttf",
+      "path": "assets/fonts/Kanit-Italic.ttf",
       "sha1": "d4b45fa70b71d7d3bc31ec3c09341672c660db28"
     },
     {
-      "path": "src/assets/fonts/Kanit-Light.ttf",
+      "path": "assets/fonts/Kanit-Light.ttf",
       "sha1": "5f73684474721ddfc98168f5b8a634d7552e89d4"
     },
     {
-      "path": "src/assets/fonts/Kanit-LightItalic.ttf",
+      "path": "assets/fonts/Kanit-LightItalic.ttf",
       "sha1": "bfa800d600db0d72fda285fceaa2e0b5234f2faf"
     },
     {
-      "path": "src/assets/fonts/Kanit-Medium.ttf",
+      "path": "assets/fonts/Kanit-Medium.ttf",
       "sha1": "61ac6e618ea64ca7f4ae2444194e0bad4c72c8f9"
     },
     {
-      "path": "src/assets/fonts/Kanit-MediumItalic.ttf",
+      "path": "assets/fonts/Kanit-MediumItalic.ttf",
       "sha1": "d4efe4ef0132a00a569ddcfb7bc292062fcd96ba"
     },
     {
-      "path": "src/assets/fonts/Kanit-Regular.ttf",
+      "path": "assets/fonts/Kanit-Regular.ttf",
       "sha1": "4d7b70e9717ae0adecc332fac9af7457063886a4"
     },
     {
-      "path": "src/assets/fonts/Kanit-SemiBold.ttf",
+      "path": "assets/fonts/Kanit-SemiBold.ttf",
       "sha1": "9715fb086966063735f84aa37f3e2dcd654ce999"
     },
     {
-      "path": "src/assets/fonts/Kanit-SemiBoldItalic.ttf",
+      "path": "assets/fonts/Kanit-SemiBoldItalic.ttf",
       "sha1": "ab47c69150c1552dc01230b7acd9423e2c3e6c47"
     },
     {
-      "path": "src/assets/fonts/Kanit-Thin.ttf",
+      "path": "assets/fonts/Kanit-Thin.ttf",
       "sha1": "c01a1c4d8a0cad6b8b4988b03c9c8f3dfa19242c"
     },
     {
-      "path": "src/assets/fonts/Kanit-ThinItalic.ttf",
+      "path": "assets/fonts/Kanit-ThinItalic.ttf",
       "sha1": "684a356c889f48a71ca6220d2e4d86fd884f917a"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-Black.ttf",
+      "path": "assets/fonts/NotoSansThai-Black.ttf",
       "sha1": "9855003ebd29e38693bac3541d781210a8b7c60b"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-Bold.ttf",
+      "path": "assets/fonts/NotoSansThai-Bold.ttf",
       "sha1": "cb17e79275330ebcc552997e422ac255f00aecb3"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-ExtraBold.ttf",
+      "path": "assets/fonts/NotoSansThai-ExtraBold.ttf",
       "sha1": "b54d2e4ad3688b17cb3b99d22bc22cad893e784d"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-ExtraLight.ttf",
+      "path": "assets/fonts/NotoSansThai-ExtraLight.ttf",
       "sha1": "8e9a69c5fe242f3ee59f574e03f77f2c534cc26b"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-Light.ttf",
+      "path": "assets/fonts/NotoSansThai-Light.ttf",
       "sha1": "060833a1bb78de985dc4a9bfdcf8a6b92b17287c"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-Medium.ttf",
+      "path": "assets/fonts/NotoSansThai-Medium.ttf",
       "sha1": "30c1db43ed78e9dc50c5f5b4a47eb36c9975d0d2"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-Regular.ttf",
+      "path": "assets/fonts/NotoSansThai-Regular.ttf",
       "sha1": "3460f3a7d82f6e09c61b601d3446044f4cac28ef"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-SemiBold.ttf",
+      "path": "assets/fonts/NotoSansThai-SemiBold.ttf",
       "sha1": "f3085d81e5c925bf0f56efb63b83abd19096bcc1"
     },
     {
-      "path": "src/assets/fonts/NotoSansThai-Thin.ttf",
+      "path": "assets/fonts/NotoSansThai-Thin.ttf",
       "sha1": "92e26629327b77250a0cde44a18bae3dea01f7c5"
     },
     {
-      "path": "src/assets/fonts/OFL.txt",
+      "path": "assets/fonts/OFL.txt",
       "sha1": "28c4e5ff40b9b4c5f90a9a3f132342c36dab9cbc"
     },
     {
-      "path": "src/assets/fonts/Roboto-Black.ttf",
+      "path": "assets/fonts/Roboto-Black.ttf",
       "sha1": "e28654c12713143bfdd72f8c559c48a19c1cbf18"
     },
     {
-      "path": "src/assets/fonts/Roboto-BlackItalic.ttf",
+      "path": "assets/fonts/Roboto-BlackItalic.ttf",
       "sha1": "91158ed880ebf4bb904568ec246e85a07fefcdfb"
     },
     {
-      "path": "src/assets/fonts/Roboto-Bold.ttf",
+      "path": "assets/fonts/Roboto-Bold.ttf",
       "sha1": "013f1bbcbbd80991a5f00fca52a90d0d7ab8b81f"
     },
     {
-      "path": "src/assets/fonts/Roboto-BoldItalic.ttf",
+      "path": "assets/fonts/Roboto-BoldItalic.ttf",
       "sha1": "41985122ae0d78676ac1eb30edde89606bdbe531"
     },
     {
-      "path": "src/assets/fonts/Roboto-Italic.ttf",
+      "path": "assets/fonts/Roboto-Italic.ttf",
       "sha1": "20420db4e13d654cbe22b5fba6296c78a6360537"
     },
     {
-      "path": "src/assets/fonts/Roboto-Light.ttf",
+      "path": "assets/fonts/Roboto-Light.ttf",
       "sha1": "51dbae4543aaa10096e344e48fcffe468bd314a9"
     },
     {
-      "path": "src/assets/fonts/Roboto-LightItalic.ttf",
+      "path": "assets/fonts/Roboto-LightItalic.ttf",
       "sha1": "538f6b977a7109f14cf314b8bad18ed84519d995"
     },
     {
-      "path": "src/assets/fonts/Roboto-Medium.ttf",
+      "path": "assets/fonts/Roboto-Medium.ttf",
       "sha1": "fddc8b1c688ef3baed0d5a46abf5f01f0edaf02b"
     },
     {
-      "path": "src/assets/fonts/Roboto-MediumItalic.ttf",
+      "path": "assets/fonts/Roboto-MediumItalic.ttf",
       "sha1": "b13559734aa602f9a1bddb8b5be72d7036858716"
     },
     {
-      "path": "src/assets/fonts/Roboto-Regular.ttf",
+      "path": "assets/fonts/Roboto-Regular.ttf",
       "sha1": "84d102488738b0ebbc7a5087973effbd54c95bd5"
     },
     {
-      "path": "src/assets/fonts/Roboto-Thin.ttf",
+      "path": "assets/fonts/Roboto-Thin.ttf",
       "sha1": "e07c400b55ef4ac7fb5ff9a79d301712922c681b"
     },
     {
-      "path": "src/assets/fonts/Roboto-ThinItalic.ttf",
+      "path": "assets/fonts/Roboto-ThinItalic.ttf",
       "sha1": "4c80f7c044a7e9a83865f625559e114ea4d7d2b1"
     }
   ]

@@ -1,46 +1,60 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import {
+    View,
+    Text,
+    Image,
+    TouchableOpacity,
+    ScrollView,
+} from 'react-native';
 import { useTLHStore } from '../../view-models/useTLHStore';
 import HeaderApp from '../../components/HeaderApp';
-
+import MedicationCardDetail from '../../components/MedicationCardDetail';
+import { imageInApp } from '../../../assets/constants/imageList';
+import { styles } from './Style';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
-    navigation: any
+    navigation: any;
 }
 
 const HealthExamDetailsScreen: React.FC<Props> = ({ navigation }) => {
+    const { t } = useTranslation();
     const { selectedMedication } = useTLHStore();
 
     if (!selectedMedication) return null;
 
     return (
         <View style={styles.container}>
-            <HeaderApp navigation={navigation} screenName='เภสัชพันธุศาสตร์' />
-            <View style={{ padding: 16, }}>
-                <Text style={styles.title}>{selectedMedication.name}</Text>
-                <Text style={styles.date}>ตรวจวันที่ : {selectedMedication.date}</Text>
-                <Text style={[styles.status, selectedMedication.status === 'ปกติ' ? styles.normal : styles.abnormal]}>
-                    {selectedMedication.status === 'ปกติ' ? 'ผลตรวจปกติ' : 'ผลตรวจผิดปกติ'}
-                </Text>
+            <HeaderApp navigation={navigation} screenName="เภสัชพันธุศาสตร์" />
+            <ScrollView>
 
-                <View style={styles.consultButtonContainer}>
+                <View style={{ padding: 10 }}>
+                    <MedicationCardDetail data={selectedMedication} />
 
-                    <Button title="ปรึกษาด่วน" color="#1a73e8" onPress={() => {/* Handle consultation action */ }} />
+                    <TouchableOpacity style={styles.emergencyButton}>
+                        <Text style={styles.emergencyButtonText}>{t("consultation")}</Text>
+                        <Text style={styles.emergencySubtitle}>
+                            {t("consultDirectly")}
+                        </Text>
+                    </TouchableOpacity>
+
+                    <View style={styles.infoContainer}>
+                        <Image source={imageInApp.imageDetail} style={styles.infoImage} />
+                    </View>
+
+                    <View style={{ margin: 10 }}>
+                        <Text style={styles.infoText}>
+                            {
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                            }
+                        </Text>
+                    </View>
                 </View>
-            </View>
+            </ScrollView>
 
         </View>
     );
 };
 
-const styles = StyleSheet.create({
-    container: { backgroundColor: '#f0f0f0' },
-    title: { fontSize: 20, fontWeight: 'bold', color: '#1a73e8', marginBottom: 8 },
-    date: { fontSize: 16, color: '#666', marginBottom: 16 },
-    status: { fontSize: 16, fontWeight: 'bold', marginBottom: 16 },
-    normal: { color: '#4CAF50' },
-    abnormal: { color: '#F44336' },
-    consultButtonContainer: { marginTop: 20 },
-});
 
 export default HealthExamDetailsScreen;

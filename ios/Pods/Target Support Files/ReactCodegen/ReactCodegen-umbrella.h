@@ -75,6 +75,8 @@
 #import "RNGoogleSignInCGenJSI.h"
 #import "RNImagePickerSpec/RNImagePickerSpec.h"
 #import "RNImagePickerSpecJSI.h"
+#import "RNLocalizeSpec/RNLocalizeSpec.h"
+#import "RNLocalizeSpecJSI.h"
 #import "RNMmkvSpec/RNMmkvSpec.h"
 #import "RNMmkvSpecJSI.h"
 #import "rnreanimated/rnreanimated.h"

@@ -1,11 +1,6 @@
 import { create } from 'zustand';
-
-interface Medication {
-    id: string;
-    name: string;
-    date: string;
-    status: 'ปกติ' | 'ผิดปกติ';
-}
+import { medicationData } from '../../assets/data/medicateData';
+import { Medication } from '../models/medicateModels';
 
 interface TLHState {
     medications: Medication[];
@@ -15,13 +10,7 @@ interface TLHState {
 }
 
 export const useTLHStore = create<TLHState>((set) => ({
-    medications: [
-        { id: '1', name: 'Allopurinol', date: '10/01/2566', status: 'ปกติ' },
-        { id: '2', name: 'Carbamazepine', date: '10/01/2566', status: 'ปกติ' },
-        { id: '3', name: 'Abacavir', date: '10/01/2566', status: 'ผิดปกติ' },
-        { id: '4', name: 'Clopidogrel', date: '10/01/2566', status: 'ปกติ' },
-        { id: '5', name: 'Warfarin', date: '10/01/2566', status: 'ผิดปกติ' },
-    ],
+    medications: medicationData,
     selectedMedication: null,
     setMedications: (medications) => set({ medications }),
     setSelectedMedication: (medication) => set({ selectedMedication: medication }),

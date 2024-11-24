@@ -47,3 +47,36 @@
 // });
 
 // export default HomeScreen;
+import { MMKV } from 'react-native-mmkv';
+
+const storage = new MMKV();
+
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+import { useTranslation } from 'react-i18next';
+// import { storage } from './storage';
+import i18n from '../../stores/i18n';
+
+const HomeScreen = () => {
+    const { t } = useTranslation();
+
+    const changeLanguage = (lng: string) => {
+        storage.set('language', lng);
+        // Dynamically change the app's language
+        i18n.changeLanguage(lng);
+    };
+
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 20, marginBottom: 20 }}>{t('welcome')}</Text>
+            <Text style={{ fontSize: 20, marginBottom: 20 }}>{t('title')}</Text>
+
+            <Button title={t('Eng')} onPress={() => changeLanguage('en')} />
+            <Button title="ไทย" onPress={() => changeLanguage('th')} />
+
+
+        </View>
+    );
+};
+
+export default HomeScreen;
