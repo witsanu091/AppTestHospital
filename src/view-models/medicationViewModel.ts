@@ -3,12 +3,13 @@ import HealthCallApi from '../service/api-service/callApiHealth';
 import { useHealthStore } from '../stores/healthStorage';
 import { Medication } from '../models/medicateModels';
 
-export const useProfileViewModel = () => {
-    const { medications, setMedications } = useHealthStore();
-    const loadHealthProfile = async (id: number) => {
+export const useHeathViewModel = () => {
+    const { medications, setMedications, selectedMedication, setSelectedMedication } = useHealthStore();
+
+    const loadHealth = async () => {
         try {
             const secretKey = process.env.KEY_ENCRYPT || '';
-            const response = await HealthCallApi.getHealth(id, secretKey);
+            const response = await HealthCallApi.getHealth(secretKey);
             if (response) {
                 setMedications(response.response_data);
             }
@@ -35,8 +36,11 @@ export const useProfileViewModel = () => {
     };
 
     return {
+        setMedications,
         medications,
-        loadHealthProfile,
+        selectedMedication,
+        setSelectedMedication,
+        loadHealth,
         saveHealthProfile,
     };
 };

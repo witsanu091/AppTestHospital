@@ -34,6 +34,7 @@ interface CallPartnerApiResponse {
 
 export const callPartnerApi = async ({ requestParams, keySecret }: CallPartnerApiParams): Promise<CallPartnerApiResponse> => {
     let responseBody: any = null;
+    console.log("🚀  process.env.BASE_URL_API:", process.env.BASE_URL_API)
 
     const response: AxiosResponse | { status: number; statusText: string; data: any } = await httpClient.request(requestParams).catch((error) => {
         return error.response
@@ -57,3 +58,4 @@ export const callPartnerApi = async ({ requestParams, keySecret }: CallPartnerAp
 
     return { status, data: responseBody, original_data: data };
 };
+

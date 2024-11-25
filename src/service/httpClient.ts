@@ -1,6 +1,5 @@
 import axios from 'axios';
 // import join from "url-join";
-import { BASE_URL_API } from "@env";
 import { getToken } from '../stores/storage';
 
 export const httpClient = axios.create({

@@ -1,24 +1,27 @@
 import { callPartnerApi } from '.';
-import { medicationData } from '../../../assets/data/medicateData';
+import { medicationData, responseData } from '../../../assets/data/medicateData';
 import { Medication } from '../../models/medicateModels';
-import { ApiResponse, ApiResponseData } from '../../models/responseModels';
+import { ApiResponseData } from '../../models/responseModels';
 import { AxiosRequestConfig } from 'axios';
 
 class HealthCallApi {
-    static async getHealth(id: number, keySecret: string): Promise<ApiResponseData | null> {
+    static async getHealth(keySecret: string): Promise<ApiResponseData | null> {
         try {
             const requestParams: AxiosRequestConfig = {
                 method: 'get',
-                url: `/health/${id}`
+                url: `/fact`
             };
+            console.log("🚀  HealthCallApi  requestParams:", requestParams)
 
             const response = await callPartnerApi({ requestParams, keySecret });
             if (response.status === 200) {
-                response.data = medicationData
+                response.data = responseData
                 return response.data as ApiResponseData;
             } else {
                 console.error("Failed to fetch Health data:", response);
-                throw new Error("Failed to fetch Health data");
+                response.data = responseData
+                // throw new Error("Failed to fetch Health data");
+                throw response.data as ApiResponseData;
             }
         } catch (error) {
             console.error("Error in getHealth:", error);
