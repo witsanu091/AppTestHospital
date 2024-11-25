@@ -1,8 +1,9 @@
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 // import { Encryption } from "../security/encryption";
 import { httpClient } from "../httpClient";
+import { Encryption } from "../security/encryption";
 
-// const encryption = new Encryption();
+const encryption = new Encryption();
 
 interface DecryptBodyResponse {
     success: boolean;
@@ -22,15 +23,21 @@ interface CallPartnerApiResponse {
 }
 
 
-// export const decryptBody = (body: { data: string }, key: string): DecryptBodyResponse => {
-//     try {
-//         const resBody = encryption.decrypt256GCM(body?.data, key);
-//         return { success: true, data: JSON.parse(resBody), error: undefined };
-//     } catch (error) {
-//         console.error("Decryption error:", error);
-//         return { success: false, data: { body }, error: error as Error };
-//     }
-// };
+export const decryptBody = async (
+    body: { data: string; },
+    key: string
+): Promise<DecryptBodyResponse> => {
+    try {
+        const resBody = await encryption.decrypt256GCM(
+            { ciphertext: body.data },
+            key
+        );
+        return { success: true, data: JSON.parse(resBody), error: undefined };
+    } catch (error) {
+        console.error("Decryption error:", error);
+        return { success: false, data: body, error: error as Error };
+    }
+};
 
 export const callPartnerApi = async ({ requestParams, keySecret }: CallPartnerApiParams): Promise<CallPartnerApiResponse> => {
     let responseBody: any = null;
@@ -48,8 +55,8 @@ export const callPartnerApi = async ({ requestParams, keySecret }: CallPartnerAp
         responseBody = data;
     } else {
         try {
-            // const decryptedBody = decryptBody(data.body, keySecret);
-            // responseBody = decryptedBody.success ? decryptedBody.data : data;
+            const decryptedBody = decryptBody(data.body, keySecret);
+            responseBody = (await decryptedBody).success ? (await decryptedBody).data : data;
         } catch (error) {
             console.error("Decryption or processing error:", error);
             responseBody = data;
